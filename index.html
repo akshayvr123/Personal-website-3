@@ -1,16 +1,19 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="Akshay VR - Professional AI Ads Creator in Kerala. Portfolio of AI founder clones and ads.">
+    <meta name="description"
+        content="Akshay VR - Professional AI Ads Creator in Kerala. Portfolio of AI founder clones and ads.">
     <title>Akshay VR | AI Ads Specialist</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
@@ -42,15 +45,29 @@
             font-size: 16px;
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             font-family: var(--font-heading);
             color: #fff;
             font-weight: 700;
         }
 
-        a { text-decoration: none; color: inherit; transition: 0.3s; }
-        ul { list-style: none; }
-        img, video { display: block; max-width: 100%; }
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img,
+        video {
+            display: block;
+            max-width: 100%;
+        }
 
         /* --- UTILITIES --- */
         .container {
@@ -64,11 +81,18 @@
             text-shadow: 0px 0px 10px rgba(212, 175, 55, 0.3);
         }
 
-        .section-padding { padding: 80px 0; }
+        .section-padding {
+            padding: 80px 0;
+        }
 
         @media (max-width: 768px) {
-            .section-padding { padding: 60px 0; }
-            .container { padding: 0 15px; }
+            .section-padding {
+                padding: 60px 0;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
         }
 
         .btn {
@@ -88,7 +112,10 @@
             font-size: 0.9rem;
         }
 
-        .btn:hover { background: var(--accent-gold); color: #000; }
+        .btn:hover {
+            background: var(--accent-gold);
+            color: #000;
+        }
 
         .btn-fill {
             background-color: var(--accent-gold);
@@ -121,18 +148,27 @@
             letter-spacing: 1px;
         }
 
-        .nav-links { display: flex; gap: 25px; }
-        .mobile-cta { display: none; }
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .mobile-cta {
+            display: none;
+        }
 
         @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .mobile-cta { 
-                display: block; 
-                background: var(--accent-gold); 
-                color: #000; 
-                padding: 8px 16px; 
-                border-radius: 4px; 
-                font-weight: 600; 
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-cta {
+                display: block;
+                background: var(--accent-gold);
+                color: #000;
+                padding: 8px 16px;
+                border-radius: 4px;
+                font-weight: 600;
                 font-size: 0.8rem;
             }
         }
@@ -178,11 +214,34 @@
         }
 
         @media (max-width: 768px) {
-            .hero { padding-bottom: 50px; text-align: center; min-height: auto; }
-            .hero-content { grid-template-columns: 1fr; gap: 30px; display: flex; flex-direction: column; }
-            .hero-text p { margin: 0 auto 30px auto; font-size: 1rem; }
-            .hero-buttons { display: flex; flex-direction: column; gap: 15px; }
-            .hero-img { width: 80%; max-width: 300px; }
+            .hero {
+                padding-bottom: 50px;
+                text-align: center;
+                min-height: auto;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .hero-text p {
+                margin: 0 auto 30px auto;
+                font-size: 1rem;
+            }
+
+            .hero-buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .hero-img {
+                width: 80%;
+                max-width: 300px;
+            }
         }
 
         /* --- STATS --- */
@@ -192,6 +251,7 @@
             border-top: var(--glass-border);
             border-bottom: var(--glass-border);
         }
+
         .stats-grid {
             display: flex;
             justify-content: space-around;
@@ -199,16 +259,32 @@
             gap: 20px;
             text-align: center;
         }
-        .stat-item h3 { font-size: 2rem; color: var(--accent-gold); }
-        .stat-item p { font-size: 0.8rem; color: #888; text-transform: uppercase; }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            color: var(--accent-gold);
+        }
+
+        .stat-item p {
+            font-size: 0.8rem;
+            color: #888;
+            text-transform: uppercase;
+        }
 
         @media (max-width: 768px) {
-            .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px 10px; }
+            .stats-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 30px 10px;
+            }
         }
 
         /* --- PORTFOLIO (VIDEO UPDATES) --- */
-        .portfolio-header { text-align: center; margin-bottom: 40px; }
-        
+        .portfolio-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -220,7 +296,8 @@
             background-color: #000;
             border-radius: 12px;
             overflow: hidden;
-            aspect-ratio: 9 / 16; /* Portrait Ratio */
+            aspect-ratio: 9 / 16;
+            /* Portrait Ratio */
             border: 1px solid #333;
             transition: transform 0.3s;
         }
@@ -228,7 +305,8 @@
         .portfolio-item video {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Ensures video fills the box */
+            object-fit: cover;
+            /* Ensures video fills the box */
             display: block;
         }
 
@@ -241,27 +319,39 @@
             backdrop-filter: blur(4px);
             padding: 8px 12px;
             border-radius: 8px;
-            border: 1px solid rgba(255,255,255,0.1);
-            pointer-events: none; /* Allows clicking through text to play video */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            pointer-events: none;
+            /* Allows clicking through text to play video */
             z-index: 2;
         }
-        
-        .portfolio-overlay h3 { font-size: 0.8rem; color: var(--accent-gold); margin: 0; }
-        .portfolio-overlay p { font-size: 0.7rem; color: #fff; margin: 0; }
+
+        .portfolio-overlay h3 {
+            font-size: 0.8rem;
+            color: var(--accent-gold);
+            margin: 0;
+        }
+
+        .portfolio-overlay p {
+            font-size: 0.7rem;
+            color: #fff;
+            margin: 0;
+        }
 
         /* Media queries for portfolio */
         @media (max-width: 768px) {
             .portfolio-grid {
-                grid-template-columns: 1fr 1fr; /* 2 Columns on Mobile */
+                grid-template-columns: 1fr 1fr;
+                /* 2 Columns on Mobile */
                 gap: 10px;
             }
+
             /* Adjust overlay for small screens */
             .portfolio-overlay {
                 top: auto;
                 bottom: 0;
                 left: 0;
                 width: 100%;
-                background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+                background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
                 border: none;
                 border-radius: 0;
                 padding: 30px 10px 10px 10px;
@@ -274,14 +364,19 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
-        
+
         .service-card {
             background: linear-gradient(145deg, #111, #0a0a0a);
             padding: 30px;
             border: 1px solid #222;
             border-radius: 10px;
         }
-        .service-card i { color: var(--accent-gold); font-size: 1.8rem; margin-bottom: 15px; }
+
+        .service-card i {
+            color: var(--accent-gold);
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
 
         /* --- CONTACT --- */
         .contact-section {
@@ -304,16 +399,24 @@
             align-items: center;
             justify-content: center;
             font-size: 28px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
             z-index: 1000;
         }
 
         /* Animation */
-        .fade-in-up { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
-        .visible { opacity: 1; transform: translateY(0); }
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
 
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
+
 <body>
 
     <nav>
@@ -322,7 +425,8 @@
             <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
                 <li><a href="#portfolio">Work</a></li>
-                <li><a href="#contact" class="btn-fill" style="padding: 8px 20px; border-radius: 4px;">Contact Me</a></li>
+                <li><a href="#contact" class="btn-fill" style="padding: 8px 20px; border-radius: 4px;">Contact Me</a>
+                </li>
             </ul>
             <a href="#contact" class="mobile-cta">LET'S TALK</a>
         </div>
@@ -336,10 +440,11 @@
             <div class="hero-text fade-in-up">
                 <h4>Content Strategist</h4>
                 <h1>High Converting <br><span class="gold-text">AI Video Ads</span></h1>
-                <p>I create viral AI-powered vertical videos and founder clones that convey emotion and drive sales. 3.3M+ views generated.</p>
+                <p>I create viral AI-powered AI Ad videos and founder clones that convey emotion and drive sales. Ex software developer now helping businesses grow on social media</p>
                 <div class="hero-buttons">
-                    <a href="https://wa.me/919876543210" class="btn btn-fill"><i class="fab fa-whatsapp"></i> Chat Now</a>
-                    <a href="#portfolio" class="btn">View Portfolio</a>
+                    <a href="https://wa.me/919876543210" class="btn btn-fill"><i class="fab fa-whatsapp"></i> Chat
+                        Now</a>
+                    <a href="https://www.instagram.com/aistoriesmalayalam/" class="btn">View Instagram</a>
                 </div>
             </div>
         </div>
@@ -348,8 +453,8 @@
     <div class="stats-bar">
         <div class="container stats-grid">
             <div class="stat-item fade-in-up">
-                <h3>3.3M+</h3>
-                <p>Views Generated</p>
+                <h3>4M+</h3>
+                <p>Organic Views</p>
             </div>
             <div class="stat-item fade-in-up">
                 <h3>15+</h3>
@@ -357,7 +462,7 @@
             </div>
             <div class="stat-item fade-in-up">
                 <h3>Top 1%</h3>
-                <p>Creator in Kerala</p>
+                <p>AI Video Creator</p>
             </div>
         </div>
     </div>
@@ -370,70 +475,63 @@
             </div>
 
             <div class="portfolio-grid">
-                
+
                 <div class="portfolio-item fade-in-up">
-                    <video controls playsinline poster="/frame 2.jpg">
-                        <source src="/Hogo Ad .mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                    <iframe width="100%" height="500" src="https://www.youtube.com/embed/2J-89CqRPx0"
+                        title="Founder Clone" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
                     <div class="portfolio-overlay">
-                        <h3>Fashion Brand</h3>
-                        <p>200k Views</p>
+                        <h3>Hogo Innovations</h3>
+                        <p>For Ad</p>
+                    </div>
+                </div>
+
+        <div class="portfolio-item fade-in-up">
+                    <iframe width="100%" height="500" src="https://www.youtube.com/embed/9WIWE5xnV8o"
+                        title="Founder Clone" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                    <div class="portfolio-overlay">
+                         <h3>Marketing Agency</h3>
+                        <p>For Ad</p>
                     </div>
                 </div>
 
                 <div class="portfolio-item fade-in-up">
-                    <video controls playsinline poster="images/poster2.jpg">
-                        <source src="videos/video2.mp4" type="video/mp4">
-                    </video>
+                    <iframe width="100%" height="500" src="https://www.youtube.com/embed/akUogyQnmpA"
+                        title="Founder Clone" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
                     <div class="portfolio-overlay">
-                        <h3>Founder Clone</h3>
-                        <p>AI Avatar</p>
+                       <h3>Election Campaign</h3>
+                        <p>60k+ views on IG</p>
                     </div>
                 </div>
 
-                <div class="portfolio-item fade-in-up">
-                    <video controls playsinline poster="images/poster3.jpg">
-                        <source src="videos/video3.mp4" type="video/mp4">
-                    </video>
+             
+
+                 <div class="portfolio-item fade-in-up">
+                    <iframe width="100%" height="500" src="https://www.youtube.com/embed/jG0S5Weu3O0"
+                        title="Founder Clone" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
                     <div class="portfolio-overlay">
-                        <h3>Real Estate</h3>
-                        <p>Luxury Tour</p>
+                       <h3>For Content Virality</h3>
+                        <p>200k+ views on IG</p>
                     </div>
                 </div>
 
-                <div class="portfolio-item fade-in-up">
-                    <video controls playsinline poster="images/poster4.jpg">
-                        <source src="videos/video4.mp4" type="video/mp4">
-                    </video>
-                    <div class="portfolio-overlay">
-                        <h3>Tech Launch</h3>
-                        <p>3D Product</p>
-                    </div>
-                </div>
 
-                <div class="portfolio-item fade-in-up">
-                    <video controls playsinline poster="images/poster5.jpg">
-                        <source src="videos/video5.mp4" type="video/mp4">
-                    </video>
-                    <div class="portfolio-overlay">
-                        <h3>Viral Reel</h3>
-                        <p>1.2M Views</p>
-                    </div>
-                </div>
 
-                <div class="portfolio-item fade-in-up">
-                    <video controls playsinline poster="images/poster6.jpg">
-                        <source src="videos/video6.mp4" type="video/mp4">
-                    </video>
-                    <div class="portfolio-overlay">
-                        <h3>Cinematic</h3>
-                        <p>Horror Style</p>
-                    </div>
-                </div>
+
 
             </div>
-            
+
             <div style="text-align: center; margin-top: 40px;">
                 <a href="https://www.youtube.com/channel/UCoSueNaOOTplC7aP1sZd1HQ" class="btn">View YouTube Channel</a>
             </div>
@@ -442,22 +540,26 @@
 
     <section id="services" class="section-padding" style="background: #080808;">
         <div class="container">
-            <h2 style="margin-bottom: 40px; text-align: center;" class="fade-in-up">My <span class="gold-text">Services</span></h2>
+            <h2 style="margin-bottom: 40px; text-align: center;" class="fade-in-up">My <span
+                    class="gold-text">Services</span></h2>
             <div class="services-grid">
                 <div class="service-card fade-in-up">
                     <i class="fas fa-magic"></i>
                     <h3>AI Ads Creation</h3>
-                    <p style="color:#888; font-size: 0.9rem;">Script-driven AI commercials tailored for Kerala businesses.</p>
+                    <p style="color:#888; font-size: 0.9rem;">Script-driven AI commercials tailored for Kerala
+                        businesses.</p>
                 </div>
                 <div class="service-card fade-in-up">
                     <i class="fas fa-user-circle"></i>
                     <h3>Founder Clones</h3>
-                    <p style="color:#888; font-size: 0.9rem;">Generate endless content without filming. Perfect for busy CEOs.</p>
+                    <p style="color:#888; font-size: 0.9rem;">Generate endless content without filming. Perfect for busy
+                        CEOs.</p>
                 </div>
                 <div class="service-card fade-in-up">
                     <i class="fas fa-chart-line"></i>
                     <h3>Growth Strategy</h3>
-                    <p style="color:#888; font-size: 0.9rem;">Optimize your video content for maximum retention and reach.</p>
+                    <p style="color:#888; font-size: 0.9rem;">Optimize your video content for maximum retention and
+                        reach.</p>
                 </div>
             </div>
         </div>
@@ -468,8 +570,10 @@
             <h2 style="font-size: 2.5rem;">Ready to scale with <br><span class="gold-text">AI?</span></h2>
             <br>
             <div style="display: flex; flex-direction: column; gap: 15px; max-width: 300px; margin: 0 auto;">
-                <a href="https://wa.me/919876543210" class="btn btn-fill" style="width: 100%;"><i class="fab fa-whatsapp"></i> WhatsApp Me</a>
-                <a href="mailto:akshay@example.com" class="btn" style="width: 100%;"><i class="fas fa-envelope"></i> Email Me</a>
+                <a href="https://wa.me/918590345468" class="btn btn-fill" style="width: 100%;"><i
+                        class="fab fa-whatsapp"></i> WhatsApp Me</a>
+                <a href="mailto:avr02339@gmail.com" class="btn" style="width: 100%;"><i class="fas fa-envelope"></i>
+                    Email Me</a>
             </div>
         </div>
     </section>
@@ -487,7 +591,7 @@
     <script>
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if(entry.isIntersecting) {
+                if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
                 }
             });
@@ -495,6 +599,7 @@
         document.querySelectorAll('.fade-in-up').forEach((el) => observer.observe(el));
     </script>
 </body>
+
 </html>
 
 ```
