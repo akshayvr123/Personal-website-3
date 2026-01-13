@@ -47,7 +47,8 @@
 
         h1,
         h2,
-        h3 {
+        h3, 
+        h4 {
             font-family: var(--font-heading);
             color: #fff;
             font-weight: 700;
@@ -271,15 +272,204 @@
             text-transform: uppercase;
         }
 
+        /* --- WHY AI ADS --- */
+        .why-ai-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-box {
+            background: rgba(18, 18, 18, 0.6);
+            border: 1px solid #222;
+            padding: 30px;
+            border-radius: 12px;
+            transition: transform 0.3s, border-color 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-gold);
+        }
+
+        .feature-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--accent-gold);
+            opacity: 0;
+            transition: 0.3s;
+        }
+
+        .feature-box:hover::before {
+            opacity: 1;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+        }
+
+        /* --- WHY CHOOSE ME --- */
+        .why-me-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .why-me-content ul {
+            margin-top: 20px;
+        }
+
+        .why-me-content li {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .check-icon {
+            color: #000;
+            background: var(--accent-gold);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+
+        .result-card {
+            background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+            border: 1px solid var(--accent-gold);
+            padding: 40px;
+            border-radius: 20px;
+            position: relative;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .result-badge {
+            background: var(--accent-gold);
+            color: #000;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .result-stat {
+            font-size: 3rem;
+            font-family: var(--font-heading);
+            color: #fff;
+            line-height: 1;
+        }
+
+        .result-stat span {
+            font-size: 1rem;
+            font-family: var(--font-main);
+            color: #888;
+            display: block;
+            margin-top: 5px;
+        }
+
         @media (max-width: 768px) {
-            .stats-grid {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 30px 10px;
+            .why-me-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .result-card {
+                padding: 30px;
+                text-align: center;
             }
         }
 
-        /* --- PORTFOLIO (VIDEO UPDATES) --- */
+        /* --- TESTIMONIALS --- */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .testimonial-card {
+            background: #111;
+            border: 1px solid #222;
+            padding: 30px;
+            border-radius: 12px;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .testimonial-card:hover {
+            border-color: var(--accent-gold);
+            transform: translateY(-5px);
+            background: #151515;
+        }
+
+        .t-quote {
+            color: var(--accent-gold);
+            font-size: 1.5rem;
+            opacity: 0.5;
+            margin-bottom: 15px;
+        }
+
+        .t-stars {
+            color: #f1c40f;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+        }
+
+        .t-text {
+            color: #ddd;
+            font-style: italic;
+            margin-bottom: 25px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .t-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-top: 1px solid #222;
+            padding-top: 20px;
+        }
+
+        .t-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--accent-gold);
+        }
+
+        .t-info h4 {
+            font-size: 1rem;
+            margin: 0;
+            color: #fff;
+        }
+
+        .t-info p {
+            font-size: 0.8rem;
+            color: #777;
+            margin: 0;
+        }
+
+
+        /* --- PORTFOLIO --- */
         .portfolio-header {
             text-align: center;
             margin-bottom: 40px;
@@ -291,19 +481,17 @@
             gap: 20px;
         }
 
-        /* FIXED: This container forces the aspect ratio */
         .portfolio-item {
             position: relative;
             background-color: #000;
             border-radius: 12px;
             overflow: hidden;
             width: 100%;
-            padding-top: 177.77%; /* 16:9 Aspect Ratio vertical (9/16 = 1.77) */
+            padding-top: 177.77%;
             border: 1px solid #333;
             transition: transform 0.3s;
         }
 
-        /* FIXED: This forces iframe to fill the container perfectly */
         .portfolio-item iframe, 
         .portfolio-item video {
             position: absolute;
@@ -315,7 +503,6 @@
             object-fit: cover;
         }
 
-        /* Overlay text styles */
         .portfolio-overlay {
             position: absolute;
             top: 15px;
@@ -341,14 +528,17 @@
             margin: 0;
         }
 
-        /* Media queries for portfolio */
         @media (max-width: 768px) {
+            .stats-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 30px 10px;
+            }
             .portfolio-grid {
-                grid-template-columns: 1fr; /* Single column stack */
-                gap: 30px; /* Space between the videos */
+                grid-template-columns: 1fr;
+                gap: 30px;
             }
 
-            /* Adjust overlay for small screens */
             .portfolio-overlay {
                 top: auto;
                 bottom: 0;
@@ -381,12 +571,61 @@
             margin-bottom: 15px;
         }
 
-        /* --- CONTACT --- */
-        .contact-section {
-            background: linear-gradient(to bottom, #050505, #111);
-            text-align: center;
-            border-top: var(--glass-border);
+        /* --- NEW IMPROVED CTA SECTION --- */
+        .cta-section {
+            padding: 80px 0;
+            background: #050505;
         }
+
+        .cta-card {
+            background: linear-gradient(145deg, #151515, #0a0a0a);
+            border: 1px solid #222;
+            border-radius: 20px;
+            padding: 60px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 50px rgba(212, 175, 55, 0.05);
+        }
+
+        /* Subtle Glow Effect behind CTA */
+        .cta-card::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+            background: var(--accent-gold);
+            filter: blur(150px);
+            opacity: 0.08;
+            pointer-events: none;
+        }
+
+        .cta-buttons-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Mobile specific adjustments for buttons */
+        @media (max-width: 500px) {
+            .cta-buttons-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            .cta-buttons-container .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
 
         /* --- FLOATING WHATSAPP --- */
         .whatsapp-float {
@@ -426,8 +665,10 @@
         <div class="container">
             <div class="logo">AKSHAY<span class="gold-text">VR</span>.</div>
             <ul class="nav-links">
-                <li><a href="#services">Services</a></li>
+                <li><a href="#why-ai">Why AI?</a></li>
                 <li><a href="#portfolio">Work</a></li>
+                <li><a href="#why-me">Why Me?</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
                 <li><a href="#contact" class="btn-fill" style="padding: 8px 20px; border-radius: 4px;">Contact Me</a>
                 </li>
             </ul>
@@ -443,7 +684,7 @@
             <div class="hero-text fade-in-up">
                 <h4>Content Strategist</h4>
                 <h1>High Converting <br><span class="gold-text">AI Video Ads</span></h1>
-                <p>I create viral AI-powered AI Ad videos and founder clones that convey emotion and drive sales. Ex software developer now helping businesses grow on social media</p>
+                <p>I create viral AI-powered AI Ad videos and founder clones that convey emotion and drive sales. Ex software developer now helping businesses grow on social media.</p>
                 <div class="hero-buttons">
                     <a href="https://wa.me/918590345468" class="btn btn-fill"><i class="fab fa-whatsapp"></i> Chat
                         Now</a>
@@ -464,11 +705,50 @@
                 <p>Viral AI Hits</p>
             </div>
             <div class="stat-item fade-in-up">
+                <h3>20+</h3>
+                <p>Clients Across the globe</p>
+            </div>
+             <div class="stat-item fade-in-up">
                 <h3>Top 1%</h3>
                 <p>AI Video Creator</p>
             </div>
         </div>
     </div>
+
+    <section id="why-ai" class="section-padding" style="background: #0a0a0a;">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 20px;" class="fade-in-up">
+                <h2>The Future is <span class="gold-text">Artificial</span></h2>
+                <p style="color: #888; max-width: 600px; margin: 10px auto;">Traditional video production is slow and expensive. AI is the cheat code for modern business growth.</p>
+            </div>
+
+            <div class="why-ai-grid">
+                <div class="feature-box fade-in-up">
+                    <div class="feature-icon"><i class="fas fa-coins"></i></div>
+                    <h3>Cut Costs by 80%</h3>
+                    <p style="color: #aaa; font-size: 0.95rem; margin-top: 10px;">
+                        Forget hiring actors, renting studios, or paying for expensive camera crews. AI allows us to create cinematic quality ads from a laptop, passing massive savings directly to your marketing budget.
+                    </p>
+                </div>
+
+                <div class="feature-box fade-in-up">
+                    <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>Speed of Light</h3>
+                    <p style="color: #aaa; font-size: 0.95rem; margin-top: 10px;">
+                        Traditional ads take weeks to film and edit. With AI, I can generate, edit, and deliver high-converting video ads in days. React to market trends instantly before your competitors do.
+                    </p>
+                </div>
+
+                <div class="feature-box fade-in-up">
+                    <div class="feature-icon"><i class="fas fa-infinity"></i></div>
+                    <h3>Infinite Variations</h3>
+                    <p style="color: #aaa; font-size: 0.95rem; margin-top: 10px;">
+                        Need to change the script? Swap the actor? Change the language? With AI, we can A/B test 10 different versions of your ad to find the one that brings the lowest Cost Per Lead.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="portfolio" class="section-padding">
         <div class="container">
@@ -478,7 +758,6 @@
             </div>
 
             <div class="portfolio-grid">
-
                 <div class="portfolio-item fade-in-up">
                     <iframe src="https://www.youtube.com/embed/2J-89CqRPx0"
                         title="Founder Clone"
@@ -563,15 +842,129 @@
         </div>
     </section>
 
-    <section id="contact" class="section-padding contact-section">
-        <div class="container fade-in-up">
-            <h2 style="font-size: 2.5rem;">Ready to scale with <br><span class="gold-text">AI?</span></h2>
-            <br>
-            <div style="display: flex; flex-direction: column; gap: 15px; max-width: 300px; margin: 0 auto;">
-                <a href="https://wa.me/918590345468" class="btn btn-fill" style="width: 100%;"><i
-                        class="fab fa-whatsapp"></i> WhatsApp Me</a>
-                <a href="mailto:avr02339@gmail.com" class="btn" style="width: 100%;"><i class="fas fa-envelope"></i>
-                    Email Me</a>
+    <section id="why-me" class="section-padding">
+        <div class="container why-me-container">
+            
+            <div class="why-me-content fade-in-up">
+                <h2>Results Driven <br><span class="gold-text">Performance</span></h2>
+                <p style="margin-top: 15px; color: #ccc;">
+                    I don't just make "cool videos." I come from a software background, meaning I look at the data. I have worked with multiple businesses in Kerala to turn views into revenue.
+                </p>
+                
+                <ul>
+                    <li>
+                        <div class="check-icon"><i class="fas fa-check"></i></div>
+                        <div>
+                            <h4 style="color: #fff;">Proven Track Record</h4>
+                            <p style="font-size: 0.9rem; color: #888;">Collaborated with agencies and local businesses to scale their ad campaigns.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="check-icon"><i class="fas fa-check"></i></div>
+                        <div>
+                            <h4 style="color: #fff;">Reduced CPL (Cost Per Lead)</h4>
+                            <p style="font-size: 0.9rem; color: #888;">My strategies are designed to stop the scroll and lower your ad spend while increasing quality leads.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="check-icon"><i class="fas fa-check"></i></div>
+                        <div>
+                            <h4 style="color: #fff;">Psychology + Tech</h4>
+                            <p style="font-size: 0.9rem; color: #888;">I combine human psychology in scripting with advanced AI visuals to create high-retention assets.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="why-me-visual fade-in-up" style="display: flex; justify-content: center;">
+                <div class="result-card">
+                    <div class="result-badge">CLIENT SUCCESS</div>
+                    <div style="margin-bottom: 30px;">
+                        <p class="result-stat">3X <span>ROAS (Return on Ad Spend)</span></p>
+                    </div>
+                    <div style="margin-bottom: 30px;">
+                        <p class="result-stat">-40% <span>Lower Cost Per Lead</span></p>
+                    </div>
+                    <div>
+                        <p class="result-stat">100% <span>Hassle Free Production</span></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="testimonials" class="section-padding" style="background: #0b0b0b;">
+        <div class="container">
+            <h2 class="fade-in-up" style="text-align: center; margin-bottom: 10px;">What Clients <span class="gold-text">Say</span></h2>
+            <p class="fade-in-up" style="text-align: center; color: #777; margin-bottom: 50px;">Real results from real business owners.</p>
+            
+            <div class="testimonial-grid">
+                
+                <div class="testimonial-card fade-in-up">
+                    <div class="t-quote"><i class="fas fa-quote-left"></i></div>
+                    <div class="t-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="t-text">"Akshay is a wizard. We needed a campaign running in 24 hours. Not only did he deliver, but the AI Founder Clone he made for us outperformed our professionally shot videos."</p>
+                    <div class="t-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="t-avatar">
+                        <div class="t-info">
+                            <h4>Rahul Menon</h4>
+                            <p>Marketing Agency Owner</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in-up">
+                    <div class="t-quote"><i class="fas fa-quote-left"></i></div>
+                    <div class="t-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="t-text">"I was skeptical about AI ads looking 'fake', but Akshay proved me wrong. The lead cost for our real estate project dropped by 40%. The quality is unmatched."</p>
+                    <div class="t-author">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Client" class="t-avatar">
+                        <div class="t-info">
+                            <h4>Arjun K.</h4>
+                            <p>Real Estate Developer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in-up">
+                    <div class="t-quote"><i class="fas fa-quote-left"></i></div>
+                    <div class="t-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="t-text">"As a startup founder, I don't have time to film reels every day. Akshay's clone solution allowed me to post daily content without stepping in front of a camera."</p>
+                    <div class="t-author">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client" class="t-avatar">
+                        <div class="t-info">
+                            <h4>Sneha P.</h4>
+                            <p>E-commerce Founder</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="cta-section">
+        <div class="container">
+            <div class="cta-card fade-in-up">
+                <h2 style="font-size: 2.5rem; line-height: 1.2;">Ready to Dominate <br> <span class="gold-text">Your Niche?</span></h2>
+                <p style="color: #bbb; max-width: 600px; margin: 15px auto 0;">Stop wasting money on traditional production. Let's build your AI advantage today.</p>
+                
+                <div class="cta-buttons-container">
+                    <a href="https://wa.me/918590345468" class="btn btn-fill" style="min-width: 200px;">
+                        <i class="fab fa-whatsapp" style="margin-right: 8px;"></i> WhatsApp Me
+                    </a>
+                    
+                    <a href="https://www.linkedin.com/in/akshay-vr-14817a233/" class="btn" style="min-width: 200px; border-color: rgba(255,255,255,0.3); color: #fff;">
+                        <i class="fab fa-linkedin" style="margin-right: 8px;"></i> Connect on LinkedIn
+                    </a>
+                </div>
             </div>
         </div>
     </section>
